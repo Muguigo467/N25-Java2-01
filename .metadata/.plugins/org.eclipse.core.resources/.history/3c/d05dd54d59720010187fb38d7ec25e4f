@@ -1,0 +1,17 @@
+package br.com.senaisp.baurusecao03.aula06;
+
+import javax.swing.JOptionPane;
+
+
+public class Exercicio01 {
+
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,
+                "Está pronto para encontrar a sua metade da laranja e esquecer aquele contatinho?",
+                "VAI DAR NAMORO",
+                JOptionPane.YES_NO_OPTION
+                );
+		
+	}
+
+}
