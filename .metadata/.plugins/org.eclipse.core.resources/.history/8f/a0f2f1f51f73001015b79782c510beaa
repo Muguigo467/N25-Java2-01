@@ -1,0 +1,30 @@
+package br.com.senaisp.baurusecao03.aula07;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exemplo04 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(Exemplo04.class.getResourceAsStream("teste_arquivo.txt")).useLocale(Locale.US);
+		/*
+		while (sc.hasNext()) {
+			String linha = sc.nextLine();
+			System.out.println(linha);
+		}
+		/*
+		 * 
+		 */
+		System.out.println(sc.nextInt()); //primeira linha
+		
+		System.out.println(sc.nextDouble()); //segunda linha primeira parte
+		System.out.println(sc.nextDouble()); //segunda linha segunda parte
+		System.out.println(sc.nextDouble()); //segunda linha terceira parte
+		sc.nextLine(); //por conta do nextDouble
+		System.out.println(sc.nextInt()); //terceira linha primeira parte
+		System.out.println(); //ultima linha
+		
+		sc.close();
+	}
+
+}

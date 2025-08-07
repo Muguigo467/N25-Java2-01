@@ -1,6 +1,6 @@
-package br.com.senaisp.bauru.secao02.aula03;
+package br.com.senaisp.baurusecao03.aula07;
 
-public class ArtAscii02 {
+public class Exemplo04 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
