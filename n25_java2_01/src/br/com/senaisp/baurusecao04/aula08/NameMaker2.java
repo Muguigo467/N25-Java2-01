@@ -1,0 +1,17 @@
+package br.com.senaisp.baurusecao04.aula08;
+
+import javax.swing.JOptionPane;
+
+public class NameMaker2 {
+
+	public static void main(String[] args) {
+		
+		String nome = JOptionPane.showInputDialog("Digite seu nome:");
+		String nomeMeio = JOptionPane.showInputDialog("Digite seu nome do meio:");
+		String sobrenome = JOptionPane.showInputDialog("Digite seu sobrenome:");
+		String nomeCompleto = nome + " " + nomeMeio + " " + sobrenome;
+		JOptionPane.showMessageDialog(null, "Seu nome completo é: " + nomeCompleto);
+		
+		
+	}
+}
