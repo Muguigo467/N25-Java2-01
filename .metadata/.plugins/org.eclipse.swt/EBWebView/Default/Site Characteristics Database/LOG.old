@@ -1,7 +1,8 @@
-2025/08/19-19:03:11.637 583c Log #24: 0 ops saved to Table #25 OK
-2025/08/19-19:03:11.638 583c Archiving C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/000024.log: OK
-2025/08/19-19:03:11.639 583c Table #4: 2 entries OK
-2025/08/19-19:03:11.639 583c Table #16: 1 entries OK
-2025/08/19-19:03:11.639 583c Table #19: 1 entries OK
-2025/08/19-19:03:11.643 583c Archiving C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/MANIFEST-000001: OK
-2025/08/19-19:03:11.650 583c **** Repaired leveldb C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database; recovered 3 files; 515 bytes. Some data may have been lost. ****
+2025/08/20-19:11:18.138 5a20 Log #27: 1 ops saved to Table #28 OK
+2025/08/20-19:11:18.139 5a20 Archiving C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/000027.log: OK
+2025/08/20-19:11:18.140 5a20 Table #4: 2 entries OK
+2025/08/20-19:11:18.140 5a20 Table #16: 1 entries OK
+2025/08/20-19:11:18.140 5a20 Table #19: 1 entries OK
+2025/08/20-19:11:18.140 5a20 Table #28: 1 entries OK
+2025/08/20-19:11:18.142 5a20 Archiving C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/MANIFEST-000001: OK
+2025/08/20-19:11:18.147 5a20 **** Repaired leveldb C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database; recovered 4 files; 677 bytes. Some data may have been lost. ****

@@ -35,18 +35,35 @@ public class BlackJackGameTest {
 			System.out.println("=".repeat(50));
 			for (int i=1;i<gam.getPlayers().size();i++) {
 				BlackJackPlayer pl = gam.getPlayers().get(i);
+				if (!pl.isParou() && !pl.isPerdedor()) {
 				System.out.println("Vez do Player " + pl.getNome());
 				for (Carta ct : pl.getCartas()) {
 					System.out.println(ct);
 				}
 				System.out.println("Seu total de cartas é " + pl.getTotalCarta());
-				System.out.println("Deseja mais uma carta? (S/N)");
-				String resp = sc.nextLine().substring(0,1).toUpperCase();
-				if (resp.equals("S")) {
-					gam.solicitarCarta(i); 
-				}//if se quer solicitar demanda
-			} //FOR dos players para solcitar e mostrar as cartas
+				do {
+					System.out.println("Deseja mais uma carta? (S/N)");
+					String resp = sc.nextLine().substring(0,1).toUpperCase();
+					if (resp.equals("S")) {
+						gam.solicitarCarta(i);
+						break;
+					}//if se quer solicitar demanda
+					if (resp.equals("N")) {
+						gam.solicitarParada(i);
+						break;
+					}//if se quer solicitar demanda
+				} while(true);
+			} //FOR dos players para solicitar e mostrar as cartas
 		}while (!gam.isFimJogo());
-	}
-
+		//Mostrando resultado
+		System.out.println("=".repeat(50));
+		System.out.println("Resultados");
+		System.out.println("=".repeat(50));
+		for (BlackJackPlayer pl : gam.getPlayers()) {
+			System.out.println("Player" + pl.getNome() + (pl.isGanhador() ?
+								" é um ganhador" : " perdeu") +
+								" com a pontuação: " + pl.getTotalCarta());
+		}
+	}	
 }
+}	

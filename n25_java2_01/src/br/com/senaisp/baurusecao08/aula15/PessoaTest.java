@@ -1,0 +1,21 @@
+package br.com.senaisp.baurusecao08.aula15;
+
+public class PessoaTest {
+
+	public static void main(String[] args) {
+		Pessoa pe01 = new Pessoa();
+		Pessoa pe02 = new Pessoa();
+		pe01.setNome("Tio Patinhas");
+		pe01.setEndereco("Avenida dos Patos, 666");
+		pe01.setDocumento("123.321.222-99");
+		pe01.setDataNascimento("09/09/1999");
+		System.out.println(pe01);
+		
+		pe02.setDocumento("123.321.222-99");
+		pe02.setDataNascimento("09/09/1999");
+		pe02.setNome("Tio Patinhas");
+		pe02.setEndereco("Avenida dos Patos, 666");
+		System.out.println(pe02);
+	} 
+
+}

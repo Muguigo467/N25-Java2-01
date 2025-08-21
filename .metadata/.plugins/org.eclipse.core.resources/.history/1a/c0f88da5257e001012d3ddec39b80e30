@@ -1,0 +1,14 @@
+package br.com.senaisp.baurusecao08.aula15;
+
+public class PessoaTest {
+
+	public static void main(String[] args) {
+		Pessoa pe01 = new Pessoa();
+		pe01.setNome("Tio Patinhas");
+		pe01.setEndereco("Avenida dos Patos");
+		pe01.setDocumento("123.321.222-99");
+		pe01.setDataNascimento("09/09/1999");
+		System.out.println(pe01);
+	} 
+
+}
