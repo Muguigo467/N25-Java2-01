@@ -1,26 +1,38 @@
 package br.com.senaisp.baurusecao08.aula15;
 
-public class Pessoa {
+public abstract class Pessoa {
 	private static int contador = 0;
 	private String nome;
 	private int id;
 	private String documento;
 	private String endereco;
 	private String dataNascimento;
-	//Constructo
+	private char tipoPessoa;
+	//Constructor
 	public Pessoa() {
 		carregarId();
 	}
 	//Sobrecarga de Constructor
-	public Pessoa(String nom, String doc, String ende, String dtNas) {
+	public Pessoa(String nom, String doc, String ende, String dtNas) 
+			throws DocumentoException, EnderecoException {
 		carregarId();
 		setNome(nom);
-		setDocumento(doc);
+		try {
+			setDocumento(doc);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		setEndereco(ende);
 		setDataNascimento(dtNas);
 	}
 	private void carregarId() {
 		id = ++contador;
+	}
+	protected char getTipoPessoa() {
+		return tipoPessoa;
+	}
+	protected void setTipoPessoa(char tipoPessoa) {
+		this.tipoPessoa = tipoPessoa;
 	}
 	public String getNome() {
 		return nome;
@@ -31,9 +43,17 @@ public class Pessoa {
 	public String getDocumento() {
 		return documento;
 	}
-	public void setDocumento(String documento) {
-		this.documento = documento;
+	public void setDocumento(String documento) throws Exception {
+		if (isDocumentoValido(documento)) {
+			this.documento = documento;
+		} else {
+			throw new Exception("Documento Inválido de acordo com o "
+					+ "tipo de pessoa!");
+		}
 	}
+	
+	protected abstract boolean isDocumentoValido(String documento2);
+	
 	public String getEndereco() {
 		return endereco;
 	}
@@ -49,15 +69,15 @@ public class Pessoa {
 	public int getId() {
 		return id;
 	}
-	//Metodos
+	//Métodos
 	@Override
 	public String toString() {
 		return "=".repeat(20) + "\n" +
-				"Id: " + getId() + "\n" +
-				"Nome: " + getNome() + "\n" +
-				"Endereço: " + getEndereco() + "\n" +
-				"Documento: " + getDocumento() + "\n" +
-				"Data Nanscimento: " + getDataNascimento() + "\n";
+			   "Id: " + getId() + "\n" +
+			   "Tipo: " + getTipoPessoa()+"\n"+
+			   "Nome: " + getNome() + "\n" + 
+			   "Endereço: " + getEndereco() + "\n" +
+			   "Documento: " + getDocumento() + "\n" +
+			   "Data Nascimento: " + getDataNascimento() + "\n";
 	}
 }
-

@@ -1,8 +1,0 @@
-package br.com.senaisp.baurusecao08.aula13;
-
-import br.com.senaisp.baurusecao05.aula11.Carta;
-
-public class Baralho {
-	private Carta[] cartas;
-	
-}
