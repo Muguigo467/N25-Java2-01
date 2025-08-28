@@ -2,7 +2,7 @@ package br.com.senaisp.bauru.richard.test;
 
 import java.sql.SQLException;
 
-import br.com.senaisp.bauru.richard.classes.ConectorBancoDados;
+import br.com.senaisp.bauru.murilo.classes.ConectorBancoDados;
 
 public class ConectorBancoDadosTest {
 

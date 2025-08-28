@@ -1,3 +1,3 @@
-2025/08/25-19:48:00.876 5050 Reusing MANIFEST C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/MANIFEST-000001
-2025/08/25-19:48:00.877 5050 Recovering log #34
-2025/08/25-19:48:00.877 5050 Reusing old log C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/000034.log 
+2025/08/27-19:03:25.543 3e0 Table #31: 2 entries OK
+2025/08/27-19:03:25.548 3e0 Archiving C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database/MANIFEST-000001: OK
+2025/08/27-19:03:25.553 3e0 **** Repaired leveldb C:\Users\Aluno\Documents\n25-java2-01\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Site Characteristics Database; recovered 1 files; 191 bytes. Some data may have been lost. ****
