@@ -1,3 +1,3 @@
 update produto set 
-descricao ='Produto 1 alterado'
+descricao = 'Produto 1 alterado'
 where id = 1
