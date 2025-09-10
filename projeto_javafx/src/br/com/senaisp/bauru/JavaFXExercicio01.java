@@ -12,6 +12,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.StrokeLineCap;
+import javafx.scene.shape.StrokeLineJoin;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -25,24 +26,25 @@ public class JavaFXExercicio01 extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		//Criando o no Root
 		Group noRoot = new Group();
-		//Criando os Componentes da tela
+		//Criando os componentes da tela
 		criarComponentes(noRoot);
-		//Criando a Cena
+		//Criando a cena
 		Scene cena = new Scene(noRoot,400,400,Color.WHITE);
-		primaryStage.setTitle("Itens JavaDX");
+		primaryStage.setTitle("Itens JavaFX");
 		primaryStage.setScene(cena);
 		primaryStage.show();
 	}
 
 	private void criarComponentes(Group noRoot) {
+		//Componentes do nó root
 		HBox cmp01 = new HBox();
-		Rectangle cmp02 = new Rectangle(100,100,Color.AQUA);
+		Rectangle cmp02 = new Rectangle(100,100,Color.BLUE);
 		Text cmp03 = new Text("Dorm 6:\n200");
-		Image img = new Image(getClass().getResource("images/Duke.png")
+		Image img = new Image(getClass().getResource("Images/Duke.png")
 				.toString());
 		ImageView cmp04 = new ImageView(img);
 		//Redimensionar a imagem
-		cmp04.setFitWidth(100); //Deixando com 100px de largura
+		cmp04.setFitWidth(100); //deixando com 100px de largura
 		//Ajuste para não distorcer a imagem
 		cmp04.setPreserveRatio(true);
 		//Criando os 3 botões
@@ -53,33 +55,35 @@ public class JavaFXExercicio01 extends Application {
 		noRoot.getChildren().addAll(cmp01,cmp02,cmp03,cmp04);
 		cmp01.getChildren().addAll(btn01,btn02,btn03);
 		//Ajustando posições
-		cmp01.setLayoutY (300);
+		cmp01.setLayoutY(300);
 		cmp01.setPrefWidth(400);
-		//Ajustando a Imagem
-		cmp04.setLayoutX (290);
-		cmp04.setLayoutY (10);
+		//Ajustando a imagem
+		cmp04.setLayoutX(290);
+		cmp04.setLayoutY(10);
 		//Ajustando o texto
-		cmp03.setLayoutX(150);
+		//https://docs.oracle.com/javafx/2/text/jfxpub-text.htm
+		cmp03.setLayoutX(120);
 		cmp03.setLayoutY(200);
 		cmp03.setFont(Font.font("Verdana",FontWeight.BOLD,30));
 		cmp03.setFill(Color.RED);
 		cmp03.setTextAlignment(TextAlignment.CENTER);//texto centralizado
-		//Colocando contorno
+		//colocando contorno
 		cmp03.setStroke(Color.BLACK);
-		cmp03.setStrokeWidth(5);//espessura do contorno
-		cmp03.setStrokeType(StrokeType.OUTSIDE);//contorno para fora
-		cmp03.setStrokeLineCap(StrokeLineCap.ROUND);//junções arrendondadas
+		cmp03.setStrokeWidth(5); //espessura do contorno
+		cmp03.setStrokeType(StrokeType.OUTSIDE); //contorno para fora
+		cmp03.setStrokeLineCap(StrokeLineCap.ROUND); //cantos arredondados
+		cmp03.setStrokeLineJoin(StrokeLineJoin.ROUND);//Junções arredondadas
 		//Criando efeito de sombra
 		DropShadow ds = new DropShadow();
 		ds.setColor(Color.BLACK);
-		//aplicando efeito no texto
+		//Aplicando o efeito no texto
 		cmp03.setEffect(ds);
 		//Ajustando o retangulo
 		cmp02.setLayoutX(10);
 		cmp02.setLayoutY(10);
 		cmp02.setStroke(Color.ORANGE);
 		cmp02.setStrokeWidth(10);
-		//Ajustando botões para se ajustar ao Hbox
+		//Ajustando botões para se ajustar ao hbox
 		HBox.setHgrow(btn01, Priority.ALWAYS);
 		HBox.setHgrow(btn02, Priority.ALWAYS);
 		HBox.setHgrow(btn03, Priority.ALWAYS);
@@ -87,7 +91,6 @@ public class JavaFXExercicio01 extends Application {
 		btn01.setMaxWidth(Double.MAX_VALUE);
 		btn02.setMaxWidth(Double.MAX_VALUE);
 		btn03.setMaxWidth(Double.MAX_VALUE);
-		
 		
 	}
 
